@@ -1,35 +1,30 @@
 # GTC Concrete Landing Page
 
-A simple static landing page for GTC Concrete, focused on WhatsApp and call leads.
+A lightweight, responsive landing page for ready-mix concrete quote requests by WhatsApp or phone.
 
-## Run Locally
+## Run locally
 
-Open `index.html` in a browser, or serve the folder with any static file server.
-(add this to test deployment)
-Example:
+Serve the folder with any static file server, then open the local URL in a browser.
 
 ```bash
-python3 -m http.server 8000
+python -m http.server 8000
 ```
 
-Then visit `http://localhost:8000`.
+## Main files
 
-## Deploy
+- `index.html` — page content, metadata, and structured data
+- `styles.css` — responsive layout and visual styling
+- `script.js` — quote validation, WhatsApp message creation, and lead tracking
+- `ready-mix-concrete-pump-guyana-*.webp` — optimized responsive hero images
+- `ready-mix-concrete-pump-guyana-*.jpg` — JPEG hero-image fallbacks
+- `og.jpg` — social sharing image
+- `robots.txt` and `sitemap.xml` — search discovery files
 
-Upload these files to any static hosting service:
+## Common updates
 
-- `index.html`
-- `styles.css`
-- `script.js`
-- `assets/gtc-concrete-hero.jpg`
-- `assets/gtc-concrete-hero.png` source image backup
+- Phone and WhatsApp: update the number in `index.html` and `WHATSAPP_NUMBER` in `script.js`.
+- Prices: update the table rows in the `prices` section.
+- Pump minimum: update the visible page copy and `PUMP_MINIMUM_YARDS` in `script.js` together.
+- Domain: update `CNAME`, canonical links, social metadata, structured-data URLs, `robots.txt`, and `sitemap.xml` together.
 
-Static hosting options include Netlify, Vercel, Cloudflare Pages, GitHub Pages, or a regular web hosting file manager.
-
-## Edit Later
-
-- Phone and WhatsApp number: update `+5926575944` and `5926575944` in `index.html`, plus `WHATSAPP_NUMBER` in `script.js`.
-- Address: update all mentions of `Aubrey Barker Road, Georgetown, Guyana` in `index.html`.
-- Price table: edit the table rows in the `prices` section of `index.html`.
-- Page text: edit the relevant section copy in `index.html`.
-- Hero image: replace `assets/gtc-concrete-hero.jpg` and keep the same filename, or update the image path in `index.html`.
+The page intentionally contains no street address or map.
